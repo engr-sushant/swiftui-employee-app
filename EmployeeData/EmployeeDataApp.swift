@@ -11,7 +11,7 @@ import SwiftUI
 struct EmployeeDataApp: App {
     var body: some Scene {
         WindowGroup {
-            EmployeeList()
+            MenuItemList()
         }
     }
 }
