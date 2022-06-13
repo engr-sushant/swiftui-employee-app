@@ -28,8 +28,8 @@ extension EmployeeList: View {
     }
 }
 
-struct EmployeeList_Preview: PreviewProvider {
-    static var previews: some View {
-        EmployeeList()
-    }
-}
+//struct EmployeeList_Preview: PreviewProvider {
+//    static var previews: some View {
+//        EmployeeList()
+//    }
+//}
