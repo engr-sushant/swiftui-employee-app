@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct EmployeeDataApp: App {
+    @StateObject var order = Order()
+    
     var body: some Scene {
         WindowGroup {
-            MenuItemList()
+            MainView()
+                .environmentObject(Order())
         }
     }
 }
