@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MenuItemDetails: View {
+    @EnvironmentObject var order: Order
     var item: MenuItem
     var body: some View {
         VStack {
@@ -25,6 +26,12 @@ struct MenuItemDetails: View {
             }
             Text(item.description)
                 .padding(4)
+            
+            Button("Add This") {
+                order.add(item: item)
+            }
+            .font(.headline)
+            .padding()
             Spacer()
         }
         .navigationTitle(Text("Food Details"))
@@ -34,6 +41,9 @@ struct MenuItemDetails: View {
 
 struct MenuItemDetails_Preview: PreviewProvider {
     static var previews: some View {
-        MenuItemDetails(item: MenuItem.example)
+        NavigationView {
+            MenuItemDetails(item: MenuItem.example)
+                .environmentObject(Order())
+        }
     }
 }
